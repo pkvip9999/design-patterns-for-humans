@@ -3,37 +3,37 @@
 ***
 
 <p align="center">
-🎉 Ultra-simplified explanation to design patterns! 🎉
+🎉 Giải thích đơn giản về design patterns! 🎉
 </p>
 <p align="center">
-A topic that can easily make anyone's mind wobble. Here I try to make them stick in to your mind (and maybe mine) by explaining them in the <i>simplest</i> way possible.
+Một chủ đề đễ dàng làm cho một sô người khó hiểu. Ở đây tôi cô gắng làm cho bạn dễ hiểu hơn (và kể cả tôi) giải thích chúng theo một cách <i>đơn giản</i> .
 </p>
 
 ***
 
-<sub>Check out my [blog](http://kamranahmed.info) and say "hi" on [Twitter](https://twitter.com/kamranahmedse).</sub>
+<sub>Xem  [blog](http://kamranahmed.info) của tôi và nói "Xin chào"  [Twitter](https://twitter.com/kamranahmedse).</sub>
 
-Introduction
+Giới thiệu
 =================
 
-Design patterns are solutions to recurring problems; **guidelines on how to tackle certain problems**. They are not classes, packages or libraries that you can plug into your application and wait for the magic to happen. These are, rather, guidelines on how to tackle certain problems in certain situations.
+Design patterns là những giải pháp cho những vấn đề thường gập phải; **Hướng dẫn giải quyết những vấn đề nhất định**. Nó không phải là những class, package or hay những thư viện mà bạn có hteer thêm vào ứng dụng của bạn và chờ đợi điều kì diệu xảy ra. Đây là những hướng dẫn về cách giải quyết các vấn đề nhất định trong những tình huống nhất định.
 
-> Design patterns are solutions to recurring problems; guidelines on how to tackle certain problems
+> Design patterns là những giải pháp cho những vấn đề thường gặp phải; hướng dẫn đẻ làm sao giải quyết một sô vấn đề
 
-Wikipedia describes them as
+Wikipedia mổ tả chúng như là
 
-> In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations.
+> Trong sản xuất phần mền, design pattern của môt phần mền là một giải pháp chung có thể tái sử dụng lên một vấn đề thường xảy ra trong một bối cảnh nhất định trong thiết kế phần mềm . Nó không phải là một thiết kế đã hoàn thành nó có thẻ được chuyển đổi trực tiếp thành mã nguồn hoặc mã máý. Nó là một description hay môt  template để giải quyết vấn đề có thể được sử dụng trong nhiều tình huống khác nhau. 
 
-⚠️ Be Careful
+⚠️ Chú ý
 -----------------
-- Design patterns are not a silver bullet to all your problems.
-- Do not try to force them; bad things are supposed to happen, if done so. 
-- Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
-- If used in a correct place in a correct manner, they can prove to be a savior; or else they can result in a horrible mess of a code.
+- Design patterns không phải là giải pháp cho tất cả những vấn đề của bạn.
+- Đừng cố thay đổi chúng; những thứ tồi tệ có thể xảy ra nếu bạn làm điều đó. 
+- Hãy nhớ rằng design patterns là những giải pháp  **cho** những vấn đê, không phải là những giải pháp **tìm ra** những vấn ; vì vậy đừng quá suy nghĩ.
+- Nếu được sử dụng đúng chỗ đúng cách, nó có thể là cứu tinh; hoặc ngược lại code của bạn sễ trở thành một mớ hỗn độn.
 
-> Also note that the code samples below are in PHP-7, however this shouldn't stop you because the concepts are same anyways.
+> Cũng chú ý rằng  code mẫu dưới đây sử dụng PHP-7, tuy nhiêu điều này sẽ không cản chở bạn bởi vì các khái niệm cũng tương tự nhau.
 
-Types of Design Patterns
+Các mẫu Design Patterns
 -----------------
 
 * [Creational](#creational-design-patterns)
@@ -43,11 +43,11 @@ Types of Design Patterns
 Creational Design Patterns
 ==========================
 
-In plain words
-> Creational patterns are focused towards how to instantiate an object or group of related objects.
+Nói một cách đơn 
+> Creational patterns là tập trung hướng tới cách khởi tạo một đối tượng hoặc một nhóm đối tượng liên quan 
 
-Wikipedia says
-> In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
+Wikipedia nói
+> Trong sản xuất phần mền, creational design patterns là các mẫu thiết kế nhằm đáp ứng các cơ chế tạo đối tượng, cố gắng tạo các đôi tượng để phù hợp với tình huống. Hình thức tạo đối tượng cơ bản có thể dẫn đến các vấn đề về thiết kế hoặc tạo thêm độ phức tạp vào thiết kế. Creational design patterns giải quyết vấn đề này bằng cách kiểm soát việc tạo ra đối tượng này.
 
  * [Simple Factory](#-simple-factory)
  * [Factory Method](#-factory-method)
@@ -58,18 +58,18 @@ Wikipedia says
 
 🏠 Simple Factory
 --------------
-Real world example
-> Consider, you are building a house and you need doors. You can either put on your carpenter clothes, bring some wood, glue, nails and all the tools required to build the door and start building it in your house or you can simply call the factory and get the built door delivered to you so that you don't need to learn anything about the door making or to deal with the mess that comes with making it.
+Ví dụ thực tế
+> Xét, Bạn đang xây dựng một ngôi nhà và bạn cần cửa. Bạn có thể mặc bộ đồ thợ mộc của bạn, mang một ít gỗ, keo dán, đinh và tất các các công cụ cần thiết để làm một cái cửa và bắt đầu làm nó trong ngôi nhà của bạn hoặc bạn chỉ cần gọi tới xưởng sản xuất và có được cái cửa đã được làm sẵn cho bạn để bạn không phải tìm hiểu bất cứ điều gì về việc làm cửa hay đối phó với mớ hỗn độn từ việc là cái cửa đó.
 
-In plain words
-> Simple factory simply generates an instance for client without exposing any instantiation logic to the client
+Nói một cách đơn giản
+> Simple factory đơn giản là tao một phần tử cho client mà không xuất bất kì logic khởi tạo nào cho client
 
-Wikipedia says
-> In object-oriented programming (OOP), a factory is an object for creating other objects – formally a factory is a function or method that returns objects of a varying prototype or class from some method call, which is assumed to be "new".
+Wikipedia nói
+> Trong lập trình hướng đối tượng (OOP), Một factory là một đối tượng để tạo các đối tượng khác  – Một factory đúng là một hàm hoặc một một phương thức trả về các đối tượng của một nguyên mẫu khác hoặc một class gọi từ một số các phương thức , được gọi là "new".
 
-**Programmatic Example**
+**Ví dụ**
 
-First of all we have a door interface and the implementation
+Trước hết chúng ta có một interface Door và được implement
 ```php
 interface Door
 {
@@ -99,7 +99,7 @@ class WoodenDoor implements Door
     }
 }
 ```
-Then we have our door factory that makes the door and returns it
+Tiếp đó chúng ta có door factory tao ra door và trả về chúng
 ```php
 class DoorFactory
 {
@@ -109,7 +109,7 @@ class DoorFactory
     }
 }
 ```
-And then it can be used as
+Và sau đó có thể sử dụng như
 ```php
 // Make me a door of 100x200
 $door = DoorFactory::makeDoor(100, 200);
@@ -121,25 +121,25 @@ echo 'Height: ' . $door->getHeight();
 $door2 = DoorFactory::makeDoor(50, 100);
 ```
 
-**When to Use?**
+**Khi nào sử dụng**
 
-When creating an object is not just a few assignments and involves some logic, it makes sense to put it in a dedicated factory instead of repeating the same code everywhere.
+Khi tạo một đối tượng không phải là một nhiêm vụ và liên quan tới một số logic, it makes sense to put it in a dedicated factory instead of repeating the same code everywhere.
 
 🏭 Factory Method
 --------------
 
-Real world example
-> Consider the case of a hiring manager. It is impossible for one person to interview for each of the positions. Based on the job opening, she has to decide and delegate the interview steps to different people.
+Ví dụ thực tế
+>Xét trường hợp của một người quản lý tuyển dụng. Một người không thể nào phỏng vấn từng vị trí. Dựa trên việc tuyển nhân viên, cô ấy phải quyết định và ủy nhiệm các bước phỏng vấn cho những người khác nhau
 
-In plain words
-> It provides a way to delegate the instantiation logic to child classes.
+Nói một cách đơn giản
+> Nó cung cấp một cách ủy quyền khởi tạo logic cho các lớp con.
 
-Wikipedia says
-> In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created. This is done by creating objects by calling a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden by derived classes—rather than by calling a constructor.
+Wikipedia nói
+> Trong lập trinh dựa trên lớp, mẫu factory method  là một mẫu creational sử dụng các factory method để xử lý vấn đề tạo đối tượng mà không phải chỉ định lớp chính xác của đối tượng sẽ được tạo. Điều này được thức hiện bằng cách tạo ra các đôi tượng nhờ gọi tới một factory method — hoặc chỉ định một interface và  implement các lớp con, hoặc implemented trên một lớp cơ sở và tùy ý overrid bởi các lớp dẫn xuất — thay vì gọi tới một constructor.
 
- **Programmatic Example**
+ **Ví dụ**
 
-Taking our hiring manager example above. First of all we have an interviewer interface and some implementations for it
+Lấy ví dụ quản lý tuyển dụng của chúng tôi ở trên. Trước hết chúng ta có một interface interviewer và được implement
 
 ```php
 interface Interviewer
@@ -164,7 +164,7 @@ class CommunityExecutive implements Interviewer
 }
 ```
 
-Now let us create our `HiringManager`
+Bời giờ chúng ta tạo `HiringManager`
 
 ```php
 abstract class HiringManager
@@ -181,7 +181,7 @@ abstract class HiringManager
 }
 
 ```
-Now any child can extend it and provide the required interviewer
+Bây giờ chúng ta có thể extend và required interviewer
 ```php
 class DevelopmentManager extends HiringManager
 {
@@ -199,7 +199,7 @@ class MarketingManager extends HiringManager
     }
 }
 ```
-and then it can be used as
+Chúng ta có thể sử dụng như
 
 ```php
 $devManager = new DevelopmentManager();
@@ -209,25 +209,25 @@ $marketingManager = new MarketingManager();
 $marketingManager->takeInterview(); // Output: Asking about community building.
 ```
 
-**When to use?**
+**Khi nào sử dụng**
 
-Useful when there is some generic processing in a class but the required sub-class is dynamically decided at runtime. Or putting it in other words, when the client doesn't know what exact sub-class it might need.
+Hữu ích khi có một sử lý chung trong một lớp  lớp con cần thiết có thể thay đổi được khi chạy. Hay nói cách khác, khi client  không biết chính xác lớp con nó co thể cần.
 
 🔨 Abstract Factory
 ----------------
 
-Real world example
-> Extending our door example from Simple Factory. Based on your needs you might get a wooden door from a wooden door shop, iron door from an iron shop or a PVC door from the relevant shop. Plus you might need a guy with different kind of specialities to fit the door, for example a carpenter for wooden door, welder for iron door etc. As you can see there is a dependency between the doors now, wooden door needs carpenter, iron door needs a welder etc.
+Ví dụ thực tế
+> Mở rộng ví dụ về  door từ Simple Factory. Căn cứ vào nhu cầu của bạn, bạn có thể nhận được một cửa bằng từ một cửa hàng cửa gỗ, cửa bằng sắt từ cửa hàng cửa sắt hoặc cửa nhựa PVC từ cửa hàng tích hợp. Thêm vào đó bạn có thể cần một người thợ với các khĩ thuật khác nhau cho từng loại cửa, ví dụ thợ mộc cho cửa gỗ thợ hàn cho cửa sắt v.v... Như bạn thấy có sự liên qua giữa các cửa cửa gỗ cần thợ mộc cửa sắt cần thợ hạn v.v...
 
-In plain words
-> A factory of factories; a factory that groups the individual but related/dependent factories together without specifying their concrete classes.
+Nói một cách đơn giản
+> Nó là một factory của các factory; một nhóm các factory đơn lẻ nhưng các factory liên quan phụ thuộc với nhau mà không cần chỉ định các lớp cụ thể của chúng.
 
-Wikipedia says
-> The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes
+Wikipedia nói
+> Mẫu abstract factory cung cấp một giải pháp để  gói gọn một nhóm các factory riêng lẻ có một chủ đề chung mà không cần chỉ định các lớp cụ thể của họ
 
-**Programmatic Example**
+**Ví dụ**
 
-Translating the door example above. First of all we have our `Door` interface and some implementation for it
+Dịch ví dụ ở trên. Trước hết ta cần interface `Door` và implement nó
 
 ```php
 interface Door
@@ -251,7 +251,7 @@ class IronDoor implements Door
     }
 }
 ```
-Then we have some fitting experts for each door type
+Sau đó, chúng tôi có một số người thợ phù hợp cho từng loại cửa
 
 ```php
 interface DoorFittingExpert
@@ -276,7 +276,7 @@ class Carpenter implements DoorFittingExpert
 }
 ```
 
-Now we have our abstract factory that would let us make family of related objects i.e. wooden door factory would create a wooden door and wooden door fitting expert and iron door factory would create an iron door and iron door fitting expert
+Bây giờ chúng ta có abstract factory cho phép chúng ta liên kết các đối tượng có liên quan tức là  nhà máy sản xuất cửa gỗ sẽ tạo ra cánh cửa gỗ và chuyên gia lắp cửa gỗ, và nhà máy sản xuất cửa sắt sẽ tạo ra cánh cửa sắt và chuyên gia lắp cửa sắt
 ```php
 interface DoorFactory
 {
@@ -312,7 +312,7 @@ class IronDoorFactory implements DoorFactory
     }
 }
 ```
-And then it can be used as
+Và bạn có thể sử dụng như
 ```php
 $woodenFactory = new WoodenDoorFactory();
 
@@ -332,24 +332,24 @@ $door->getDescription();  // Output: I am an iron door
 $expert->getDescription(); // Output: I can only fit iron doors
 ```
 
-As you can see the wooden door factory has encapsulated the `carpenter` and the `wooden door` also iron door factory has encapsulated the `iron door` and `welder`. And thus it had helped us make sure that for each of the created door, we do not get a wrong fitting expert.   
+Như bạn có thể thấy nhà máy cửa gỗ nhóm `carpenter` và `wooden door` cũng như vậy nhà máy cửa sắt nhóm `iron door`  `welder`. Và do đó nó đã giúp chúng tôi đảm bảo rằng đối với mỗi cánh cửa được tạo ra, chúng tôi không nhận được một chuyên gia phù hợp sai.
 
-**When to use?**
+**Khi nào sử**
 
-When there are interrelated dependencies with not-that-simple creation logic involved
+Khi có sự phụ thuộc tương quan giữa các logic phức tạp có liên   liên quan
 
 👷 Builder
 --------------------------------------------
-Real world example
-> Imagine you are at Hardee's and you order a specific deal, lets say, "Big Hardee" and they hand it over to you without *any questions*; this is the example of simple factory. But there are cases when the creation logic might involve more steps. For example you want a customized Subway deal, you have several options in how your burger is made e.g what bread do you want? what types of sauces would you like? What cheese would you want? etc. In such cases builder pattern comes to the rescue.
+Ví dụ thực tế
+> Hãy tưởng tượng là bạn đang ở Hardee's và bạn đặt một đơn hàng , hãy nói "Big hardee" và họ đưa cho bạn mà không có bất kì câu hỏi nào; đây là một ví dụ về simple factory. Nhưng đâu là những trường hợp khi logic khởi tạo liên quan tới nhiều bước. Ví dụ như bạn muốn tùy chỉnh đơn Subway, bạn có nhiều lựa chọn trong việc chiếc burger của bjan được làm như nào như bạn đang muốn bánh mì gì? loại sốt mà bạn muốn?... Trong những trường hợp như vậy, builder pattern được sử dụng như một giải pháp.
 
-In plain words
-> Allows you to create different flavors of an object while avoiding constructor pollution. Useful when there could be several flavors of an object. Or when there are a lot of steps involved in creation of an object.
+Nói một cách đơn giản
+> Cho phép bạn bạn tạo các object có đặc điểm khác nhau trong khi tránh bị ảnh hưởng việc khởi tạo. Nó hữu dụng khi có thể tạo nhiều tùy chọn cho một object. Hoặc khi có quá nhiều bước trong việc tạo ra một object.
 
-Wikipedia says
-> The builder pattern is an object creation software design pattern with the intentions of finding a solution to the telescoping constructor anti-pattern.
+Wikipedia nói
+> builder pattern là một phần mền design pattern tạo ra các đối tượng với ý định tìm kiếm giải pháp chống constructor.
 
-Having said that let me add a bit about what telescoping constructor anti-pattern is. At one point or the other we have all seen a constructor like below:
+Nói xa thêm chút về mô hình chống constructor. Tại một thời điểm khác, chúng tôi đã thấy một constructor như dưới đây:
 
 ```php
 public function __construct($size, $cheese = true, $pepperoni = true, $tomato = false, $lettuce = true)
@@ -357,11 +357,11 @@ public function __construct($size, $cheese = true, $pepperoni = true, $tomato = 
 }
 ```
 
-As you can see; the number of constructor parameters can quickly get out of hand and it might become difficult to understand the arrangement of parameters. Plus this parameter list could keep on growing if you would want to add more options in future. This is called telescoping constructor anti-pattern.
+Như bạn thấy, số lượng tham số của hàm khởi tạo có thể nhanh chóng làm bạn mất kiểm soát và nó dần trở nên rất khó hiểu về sự sắp xếp các tham số. Thêm nữa là danh sách những tham số có thể tiếp tục phát triển nếu bạn muốn thêm nhiều option trong tương lai. Điều này được gọi là mô hình chống constructor.
 
-**Programmatic Example**
+**Ví dụ**
 
-The sane alternative is to use the builder pattern. First of all we have our burger that we want to make
+Cách thay thế hợp lý là sử dụng builder pattern. Trước chúng ta có buger cái chúng ta muốn làm.
 
 ```php
 class Burger
@@ -384,7 +384,7 @@ class Burger
 }
 ```
 
-And then we have the builder
+Và chúng ta có một builder
 
 ```php
 class BurgerBuilder
@@ -431,7 +431,7 @@ class BurgerBuilder
     }
 }
 ```
-And then it can be used as:
+Và sau đó có thể sử dụng như sau:
 
 ```php
 $burger = (new BurgerBuilder(14))
@@ -441,26 +441,27 @@ $burger = (new BurgerBuilder(14))
                     ->build();
 ```
 
-**When to use?**
+**Khi nào sử dụng**
 
-When there could be several flavors of an object and to avoid the constructor telescoping. The key difference from the factory pattern is that; factory pattern is to be used when the creation is a one step process while builder pattern is to be used when the creation is a multi step process.
+Khi có thể có một số đặc điểm của object và tránh việc chống lại khởi tạo. Sự khác biệt chính của factory pattern là đây; factory pattern được sử dụng khi việc khởi tạo chỉ có một bước trong tiến trình trong khi builder pattern được sử dụng khi có nhiều bước trong quá trình.
 
 🐑 Prototype
 ------------
-Real world example
-> Remember dolly? The sheep that was cloned! Lets not get into the details but the key point here is that it is all about cloning
+Ví dụ thực tế
+> Bạn có nhớ dolly? Con cừu mà được nhân bản! Cho phép không nói chi tiết nhưng điểm mấu chốt ở đây là nhân bản.
 
-In plain words
-> Create object based on an existing object through cloning.
+Nói một cách đơn giản
+> Việc tạo object dựa trên một object đã tồn tại thông qua việc nhân bản.
 
-Wikipedia says
-> The prototype pattern is a creational design pattern in software development. It is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects.
 
-In short, it allows you to create a copy of an existing object and modify it to your needs, instead of going through the trouble of creating an object from scratch and setting it up.
+Wikipedia nói
+> Prototype pattern là một creational design pattern trong phát triển phần mềm. Nó được sử dụng khi kiểu của object cần tạo được định nghĩa bởi một phần tử nguyên mẫu, giống như việc nhân bản nó để tạo ra một object mới.
 
-**Programmatic Example**
+Nói ngắn gọn, nó cho phép bạn tạo một bản sao chpes một object đã tồn tại và sửa đổi nó theo nhu cầu của bạn thay vì trải qua các sự cố khi tạo một object từ đầu và thiết lập lại nó.
 
-In PHP, it can be easily done using `clone`
+**Ví dụ**
+
+Trong PHP, nó khá dễ dàng để sử dụng `clone`
 
 ```php
 class Sheep
@@ -495,7 +496,7 @@ class Sheep
     }
 }
 ```
-Then it can be cloned like below
+Sau đó nó có thể clone như dưới đây
 ```php
 $original = new Sheep('Jolly');
 echo $original->getName(); // Jolly
@@ -508,28 +509,28 @@ echo $cloned->getName(); // Dolly
 echo $cloned->getCategory(); // Mountain sheep
 ```
 
-Also you could use the magic method `__clone` to modify the cloning behavior.
+Bạn cũng có thể sử dụng  magic method `__clone` để sửa đổi các hành vi khi nhân bản.
 
-**When to use?**
+**Khi nào sử dụng**
 
-When an object is required that is similar to existing object or when the creation would be expensive as compared to cloning.
+Khi một object được yêu cầu phải tương tự như object hiện có hoặc khi việc khởi tạo mất nhiều công hơn việc nhân bản.
 
 💍 Singleton
 ------------
-Real world example
-> There can only be one president of a country at a time. The same president has to be brought to action, whenever duty calls. President here is singleton.
+Ví dụ thực tế
+> Cùng một lúc chỉ có thể có một tổng thống đối với mỗi quốc gia. Cùng một tổng thống phải đưa ra được hành động bất cứ khi nào nhiệm vụ gọi. Tổng thống ở đâu là một singleton.
 
-In plain words
-> Ensures that only one object of a particular class is ever created.
+Nói đơn giản
+> Đảm bảo là chỉ có một đối tượng duy nhất của mỗi class được tạo ra.
 
-Wikipedia says
-> In software engineering, the singleton pattern is a software design pattern that restricts the instantiation of a class to one object. This is useful when exactly one object is needed to coordinate actions across the system.
+Wikipedia nói
+> Trong sản xuất phần mền, singleton pattern là một phần mền design pattern hạn chế sự khởi tạo của một lớp đối với một đối tượng.Điều này rất hữu ích khi cần một đối tượng chính xác để điều phối các hành động trên toàn hệ thống.
 
-Singleton pattern is actually considered an anti-pattern and overuse of it should be avoided. It is not necessarily bad and could have some valid use-cases but should be used with caution because it introduces a global state in your application and change to it in one place could affect in the other areas and it could become pretty difficult to debug. The other bad thing about them is it makes your code tightly coupled plus mocking the singleton could be difficult.
+Singleton pattern thực sự được coi là một mô hình chống và lạm dụng nó nên tránh. Nó không nhất thiết là xấu và có thể có một số trường hợp sử dụng hợp lệ nhưng nên được sử dụng thận trọng vì nó giới thiệu một trạng thái toàn cầu trong ứng dụng của bạn và thay đổi nó ở một nơi có thể ảnh hưởng đến các khu vực khác và nó có thể trở nên khá khó khăn để gỡ lỗi. Điều tệ hại khác về họ là nó làm cho mã của bạn được kết hợp chặt chẽ cộng với chế nhạo singleton có thể khó khăn.
 
-**Programmatic Example**
+**Ví dụ**
 
-To create a singleton, make the constructor private, disable cloning, disable extension and create a static variable to house the instance
+Tạo một singleton, làm một  constructor private,  vô hiệu hóa nhân bản, vô hiệu hóa phần mở rộng và tạo một biến tĩnh để chứa phần tử đó
 ```php
 final class President
 {
@@ -560,7 +561,7 @@ final class President
     }
 }
 ```
-Then in order to use
+Sau đó để sử dụng
 ```php
 $president1 = President::getInstance();
 $president2 = President::getInstance();
