@@ -5,6 +5,7 @@
  * Date: 11/25/18
  * Time: 11:19
  */
+//namespace Creational\SimpleFactory;
 
 class DoorFactory
 {

@@ -5,6 +5,8 @@
  * Date: 11/25/18
  * Time: 11:17
  */
+include_once __DIR__ . '/' . 'Door.php';
+//namespace Creational\SimpleFactory;
 
 class WoodenDoor implements Door
 {

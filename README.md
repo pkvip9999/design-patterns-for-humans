@@ -277,7 +277,7 @@ class Carpenter implements DoorFittingExpert
 }
 ```
 
-Bây giờ chúng ta có abstract factory của chúng ta sẽ cho phép chúng ta tạo mộ family của các đối tượng liên quan tức là nhà máy sản xuất cửa gỗ sẽ tạo ra một cánh cửa gỗ và chuyên gia lắp cửa gỗ và nhà máy sản xuất cửa sắt sẽ tạo ra một cánh cửa sắt và chuyên gia lắp cửa sắt
+Bây giờ chúng ta có abstract factory của chúng ta sẽ cho phép chúng ta tạo một family của các đối tượng liên quan tức là nhà máy sản xuất cửa gỗ sẽ tạo ra một cánh cửa gỗ và chuyên gia lắp cửa gỗ và nhà máy sản xuất cửa sắt sẽ tạo ra một cánh cửa sắt và chuyên gia lắp cửa sắt
 
 ```php
 interface DoorFactory
@@ -352,7 +352,8 @@ Nói đơn giản
 Wikipedia says
 > builder pattern là một software design pattern khởi tạo đối tượng với ý định tìm kiếm một giải pháp cho the telescoping constructor anti-pattern.
 
-Having said that let me add a bit about what telescoping constructor anti-pattern is. At one point or the other we have all seen a constructor like below:
+Có nói rằng hãy để tôi thêm một chút về những gì constructor telescoping anti-pattern là. Tại một thời điểm hoặc khác, chúng tôi có tất cả cái nhìn về một contructor như dưới đây:
+
 
 ```php
 public function __construct($size, $cheese = true, $pepperoni = true, $tomato = false, $lettuce = true)
@@ -360,7 +361,7 @@ public function __construct($size, $cheese = true, $pepperoni = true, $tomato = 
 }
 ```
 
-As you can see; the number of constructor parameters can quickly get out of hand and it might become difficult to understand the arrangement of parameters. Plus this parameter list could keep on growing if you would want to add more options in future. This is called telescoping constructor anti-pattern.
+Bạn có thể thấy, số lượng đối số truyền vào của contructor có thể nhanh chóng tuột khỏi tay và có thể trở nên khó khăn để hiểu được sắp xếp các đối số đó. Thêm vào danh sách đối số này có thể tiếp tục phát triển nếu bạn muốn thêm nhiều tùy chọn hơn trong tương lai. Điều này được gọi là telescoping constructor anti-pattern.
 
 **Ví dụ lập  trình**
 
@@ -528,11 +529,11 @@ Nói đơn giản
 Wikipedia nói
 > Trong kỹ thuật phần mềm, singleton pattern là một software design pattern hạn chế sự khởi tạo của một claas thành một đối tượng. Điều này rất hữu ích khi cần một đối tượng chính xác để điều phối các hành động trên toàn hệ thống.
 
-Singleton pattern is actually considered an anti-pattern and overuse of it should be avoided. It is not necessarily bad and could have some valid use-cases but should be used with caution because it introduces a global state in your application and change to it in one place could affect in the other areas and it could become pretty difficult to debug. The other bad thing about them is it makes your code tightly coupled plus mocking the singleton could be difficult.
+Singleton pattern thực sự được coi là anti-pattern và việc lạm dụng nó nên tránh. Nó không nhất thiết là xấu và có thể có một số trường hợp sử dụng hợp lệ nhưng nên được sử dụng thận trọng vì nó giới thiệu một trạng thái toàn cục trong ứng dụng của bạn và thay đổi nó ở một nơi có thể ảnh hưởng đến các khu vực khác và nó có thể trở nên khá khó khăn để gỡ lỗi .Điều tệ hại khác về chúng là nó làm cho code của bạn được kết hợp chặt chẽ cộng với mocking singleton có thể khó khăn
 
 **Ví dụ lập  trình**
 
-Tạo một singleton, make the constructor private, disable cloning, disable extension and create a static variable to house the instance
+Tạo một singleton, tạo constructor private, vô hiệu hoá cloning, vô hiệu hó extension và tạo một biến static variable đến nhà của thể hiện 
 ```php
 final class President
 {
