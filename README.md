@@ -3,7 +3,7 @@
 ***
 
 <p align="center">
-🎉 Ultra-simplified explanation to design patterns! 🎉
+🎉  Giải thích đơn giản về design patterns! 🎉
 </p>
 <p align="center">
 Một chủ đề có thể dễ dàng làm suy nghĩ bị lung lay. Ở đây tôi cố gắng đứa nó vào tâm trí của bạn (và có thể là tôi) bằng cách giải thích chúng theo các đơn giản nhất.
@@ -59,7 +59,7 @@ Wikipedia nói
 🏠 Simple Factory
 --------------
 Ví dụ thực tế
-> Hãy xem xét, bạn đang xây dựng một ngôi nhà và bạn cần những cái cửa. Bạn có thể mặc quần áo thợ mộc, mang một ít gỗ, keo, móng tay và tất cả các công cụ cần thiết để làm cái cửa và bắt đầu làm nó trong nhà của bạn hoặc bạn có thể đơn giản chỉ cần gọi đến nhà máy và nhận được cánh cửa đã được làm giao cho bạn mà bạn không cần phải tìm hiểu bất cứ điều gì về việc làm cửa hoặc để đối phó với mớ hỗn độn mà đi kèm với việc làm nó.
+> Hãy xem xét, bạn đang xây dựng một ngôi nhà và bạn cần những cái cửa. Bạn có thể mặc quần áo thợ mộc, mang một ít gỗ, keo, đinh và tất cả các công cụ cần thiết để làm cái cửa và bắt đầu làm nó trong nhà của bạn hoặc bạn có thể đơn giản chỉ cần gọi đến nhà máy và nhận được cánh cửa đã được làm giao cho bạn mà bạn không cần phải tìm hiểu bất cứ điều gì về việc làm cửa hoặc để đối phó với mớ hỗn độn mà đi kèm với việc làm nó.
 
 Nói một cách đơn giản
 > Simple factory chỉ cần tạo một thể hiện cho client mà không lộ bất kỳ sự logic khởi tạo nào cho client.
@@ -365,7 +365,7 @@ Bạn có thể thấy, số lượng đối số truyền vào của contructor
 
 **Ví dụ lập  trình**
 
-Cách thay thế tốt là sử dụng builder pattern. Trước hết, chúng ta có bánh mì kẹp thịt mà chúng ta muốn làm
+Cách thay thế tốt là sử dụng builder pattern. Trước hết, chúng ta có Buger mà chúng ta muốn làm
 
 ```php
 class Burger
