@@ -636,7 +636,7 @@ class Hunter
 }
 ```
 
-Bây giờ giả sử chúng ta phải thêm một `WildDog` trong trò chơi của chúng ta để thợ săn cơ thể đi săn. Nhưng chúng ta không thể trực tiếp làm điều đó, bởi bị con chó có một interface khác. Để làm cho nó tương thích với interface của thợ săn, chúng ta sẽ tạo một adapter tương thích.
+Bây giờ giả sử chúng ta phải thêm một `WildDog` trong trò chơi của chúng ta để thợ săn có thể đi săn. Nhưng chúng ta không thể trực tiếp làm điều đó, bởi con chó có một interface khác. Để làm cho nó tương thích với interface của thợ săn, chúng ta sẽ tạo một adapter tương thích.
 
 ```php
 // This needs to be added to the game
@@ -778,7 +778,7 @@ Nói một cách đơn giản
 > Composite pattern cho phép client xử lý các đối tượng riêng lẻ theo cách thống nhất.
 
 Wikipedia nói
-> In software engineering, the composite pattern is a partitioning design pattern. The composite pattern describes that a group of objects is to be treated in the same way as a single instance of an object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies. Implementing the composite pattern lets clients treat individual objects and compositions uniformly.
+> Trong sản xuất phần mền, composite pattern là một mẫu thiết kế phân vùng. Nó mô tả rằng một nhóm các đối tượng được xử lý giống như một phần tử đơn lẻ của một đối tượng. Mục đích của một composite là để "soạn" các đối tượng vào cấu trúc cây để đại diện cho toàn bộ hệ thống phân cấp. Việc triển khai composite pattern cho phép  các client xử lý các đối tượng và bố cục riêng lẻ một cách thống nhất.
 
 **Ví dụ lập  trình**
 
