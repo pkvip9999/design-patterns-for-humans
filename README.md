@@ -688,7 +688,7 @@ Wikipedia nói
 
 **Ví dụ**
 
-Đang dịch ví dụ WebPage ở trên. Ở đây chúng ta có hệ thống phân cấp `WebPage`
+Dùng lại ví dụ WebPage ở trên. Ở đây chúng ta có hệ thống phân cấp `WebPage`
 
 ```php
 interface WebPage
@@ -775,10 +775,10 @@ Ví dụ thực tế
 > Mọi tổ chức đều bao gồm các nhân viên. Mỗi nhân viên có cùng tính năng như có một mức lương, có một số trách nhiệm, có thể hoặc không thể báo cáo cho ai đó, có thể hoặc có thể không có một số cấp dưới, v.v.
 
 Nói đơn giản
-> Composite pattern cho phép client xử lý các đối tượng riêng lẻ theo cách thống nhấ
+> Composite pattern cho phép client xử lý các đối tượng riêng lẻ theo cách thống nhất
 
 Wikipedia nói
-> Trong sản xuất phần mền, composite pattern là một mẫu thiết kế phân vùng. Nó mô tả rằng một nhóm các đối tượng được xử lý giống như một phần tử đơn lẻ của một đối tượng. Mục đích của một composite là để "soạn" các đối tượng vào cấu trúc cây để đại diện cho toàn bộ hệ thống phân cấp. Việc triển khai composite pattern cho phép  các client xử lý các đối tượng và bố cục riêng lẻ một cách thống nhất.
+> Trong sản xuất phần mềm, composite pattern là một mẫu thiết kế phân vùng. Nó mô tả rằng một nhóm các đối tượng được xử lý giống như một phần tử đơn lẻ của một đối tượng. Mục đích của một composite là để "soạn" các đối tượng vào cấu trúc cây để đại diện cho toàn bộ hệ thống phân cấp. Việc triển khai composite pattern cho phép  các client xử lý các đối tượng và bố cục riêng lẻ một cách thống nhất.
 
 **Ví dụ**
 
@@ -918,7 +918,7 @@ Wikipedia nói
 
 **Ví dụ**
 
-Lấy cafe cho ví dụ. Đầu tiên chúng ta có một coffe đơn giản thực hiện implements với coffee interface
+Lấy việc pha cafe làm ví dụ. Đầu tiên chúng ta có một coffe đơn giản thực hiện implements với coffee interface
 
 
 ```php
