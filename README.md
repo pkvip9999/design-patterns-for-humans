@@ -6,7 +6,7 @@
 🎉 Giải thích đơn giản về design patterns! 🎉
 </p>
 <p align="center">
-Một chủ đề đễ dàng làm cho một sô người khó hiểu. Ở đây tôi cô gắng làm cho bạn dễ hiểu hơn (và kể cả tôi) giải thích chúng theo một cách <i>đơn giản</i> .
+Một chủ đề đễ làm cho một số người khó hiểu. Ở đây tôi cô gắng giải thích chúng theo một cách <i>đơn giản</i> làm cho bạn dễ hiểu hơn (và kể cả tôi).
 </p>
 
 ***
@@ -16,17 +16,17 @@ Một chủ đề đễ dàng làm cho một sô người khó hiểu. Ở đây
 Giới thiệu
 =================
 
-Design patterns là những giải pháp cho những vấn đề thường gập phải; **Hướng dẫn giải quyết những vấn đề nhất định**. Nó không phải là những class, package or hay những thư viện mà bạn có hteer thêm vào ứng dụng của bạn và chờ đợi điều kì diệu xảy ra. Đây là những hướng dẫn về cách giải quyết các vấn đề nhất định trong những tình huống nhất định.
+Design patterns là những giải pháp cho những vấn đề thường gập phải; **Hướng dẫn giải quyết những vấn đề nhất định**. Nó không phải là những class, package hay những thư viện mà bạn có thể thêm vào ứng dụng của bạn và chờ đợi điều kì diệu xảy ra. Đây là những hướng dẫn về cách giải quyết các vấn đề nhất định trong những tình huống nhất định.
 
 > Design patterns là những giải pháp cho những vấn đề thường gặp phải; hướng dẫn đẻ làm sao giải quyết một sô vấn đề
 
 Wikipedia mổ tả chúng như là
 
-> Trong sản xuất phần mền, design pattern của môt phần mền là một giải pháp chung có thể tái sử dụng lên một vấn đề thường xảy ra trong một bối cảnh nhất định trong thiết kế phần mềm . Nó không phải là một thiết kế đã hoàn thành nó có thẻ được chuyển đổi trực tiếp thành mã nguồn hoặc mã máý. Nó là một description hay môt  template để giải quyết vấn đề có thể được sử dụng trong nhiều tình huống khác nhau. 
+> Trong sản xuất phần mền, design pattern của môt phần mền là một giải pháp chung có thể tái sử dụng lên một vấn đề thường xảy ra trong một bối cảnh nhất định trong thiết kế phần mềm . Nó không phải là một thiết kế đã hoàn thành nó có thẻ được chuyển đổi trực tiếp thành mã nguồn hoặc mã máý. Nó là một phần mô tả hay môt khuôn mẫu để giải quyết vấn đề có thể được sử dụng trong nhiều tình huống khác nhau. 
 
 ⚠️ Chú ý
 -----------------
-- Design patterns không phải là giải pháp cho tất cả những vấn đề của bạn.
+- Design pattern không phải là giải pháp cho tất cả những vấn đề của bạn.
 - Đừng cố thay đổi chúng; những thứ tồi tệ có thể xảy ra nếu bạn làm điều đó. 
 - Hãy nhớ rằng design patterns là những giải pháp  **cho** những vấn đê, không phải là những giải pháp **tìm ra** những vấn ; vì vậy đừng quá suy nghĩ.
 - Nếu được sử dụng đúng chỗ đúng cách, nó có thể là cứu tinh; hoặc ngược lại code của bạn sễ trở thành một mớ hỗn độn.
@@ -47,7 +47,7 @@ Nói một cách đơn
 > Creational patterns là tập trung hướng tới cách khởi tạo một đối tượng hoặc một nhóm đối tượng liên quan 
 
 Wikipedia nói
-> Trong sản xuất phần mền, creational design patterns là các mẫu thiết kế nhằm đáp ứng các cơ chế tạo đối tượng, cố gắng tạo các đôi tượng để phù hợp với tình huống. Hình thức tạo đối tượng cơ bản có thể dẫn đến các vấn đề về thiết kế hoặc tạo thêm độ phức tạp vào thiết kế. Creational design patterns giải quyết vấn đề này bằng cách kiểm soát việc tạo ra đối tượng này.
+> Trong sản xuất phần mềm, creational design patterns là các mẫu thiết kế nhằm đáp ứng các cơ chế tạo đối tượng, cố gắng tạo các đôi tượng để phù hợp với mỗi tình huống. Hình thức tạo đối tượng cơ bản có thể dẫn đến các vấn đề về thiết kế hoặc gia tăng độ phức tạp đối với thiết kế. Creational design patterns giải quyết vấn đề này bằng cách kiểm soát việc tạo ra đối tượng này.
 
  * [Simple Factory](#-simple-factory)
  * [Factory Method](#-factory-method)
@@ -59,10 +59,10 @@ Wikipedia nói
 🏠 Simple Factory
 --------------
 Ví dụ thực tế
-> Xét, Bạn đang xây dựng một ngôi nhà và bạn cần cửa. Bạn có thể mặc bộ đồ thợ mộc của bạn, mang một ít gỗ, keo dán, đinh và tất các các công cụ cần thiết để làm một cái cửa và bắt đầu làm nó trong ngôi nhà của bạn hoặc bạn chỉ cần gọi tới xưởng sản xuất và có được cái cửa đã được làm sẵn cho bạn để bạn không phải tìm hiểu bất cứ điều gì về việc làm cửa hay đối phó với mớ hỗn độn từ việc là cái cửa đó.
+> Xét, Bạn đang xây dựng một ngôi nhà và bạn cần cửa. Bạn có thể mặc bộ đồ thợ mộc của bạn, mang một ít gỗ, keo dán, đinh và tất cả các công cụ cần thiết để làm một cái cửa và bắt đầu làm nó trong ngôi nhà của bạn hoặc đơn giản bạn chỉ cần gọi tới xưởng sản xuất và lấy được cái cửa đã được làm sẵn cho bạn để bạn không phải tìm hiểu bất cứ điều gì về việc làm cửa hay đối phó với mớ hỗn độn từ việc là cái cửa đó.
 
 Nói một cách đơn giản
-> Simple factory đơn giản là tao một phần tử cho client mà không xuất bất kì logic khởi tạo nào cho client
+> Simple factory đơn giản là tao một phần tử cho client mà không thể hiện bất kì logic về khởi tạo nào cho client
 
 Wikipedia nói
 > Trong lập trình hướng đối tượng (OOP), Một factory là một đối tượng để tạo các đối tượng khác  – Một factory đúng là một hàm hoặc một một phương thức trả về các đối tượng của một nguyên mẫu khác hoặc một class gọi từ một số các phương thức , được gọi là "new".
@@ -109,7 +109,7 @@ class DoorFactory
     }
 }
 ```
-Và sau đó có thể sử dụng như
+Và sau đó có thể sử dụng như sau
 ```php
 // Make me a door of 100x200
 $door = DoorFactory::makeDoor(100, 200);
@@ -123,7 +123,7 @@ $door2 = DoorFactory::makeDoor(50, 100);
 
 **Khi nào sử dụng**
 
-Khi tạo một đối tượng không phải là một nhiêm vụ và liên quan tới một số logic, it makes sense to put it in a dedicated factory instead of repeating the same code everywhere.
+Khi tạo một đối tượng không phải là một nhiêm vụ và liên quan tới một số logic, hãy ghi nhớ việc đặt nó vào trong một factory chuyên dụng thay vì lặp lại đoạn code tương tự ở mọi nơi.
 
 🏭 Factory Method
 --------------
@@ -217,7 +217,7 @@ Hữu ích khi có một sử lý chung trong một lớp  lớp con cần thi�
 ----------------
 
 Ví dụ thực tế
-> Mở rộng ví dụ về  door từ Simple Factory. Căn cứ vào nhu cầu của bạn, bạn có thể nhận được một cửa bằng từ một cửa hàng cửa gỗ, cửa bằng sắt từ cửa hàng cửa sắt hoặc cửa nhựa PVC từ cửa hàng tích hợp. Thêm vào đó bạn có thể cần một người thợ với các khĩ thuật khác nhau cho từng loại cửa, ví dụ thợ mộc cho cửa gỗ thợ hàn cho cửa sắt v.v... Như bạn thấy có sự liên qua giữa các cửa cửa gỗ cần thợ mộc cửa sắt cần thợ hạn v.v...
+> Mở rộng ví dụ về  door từ Simple Factory. Căn cứ vào nhu cầu của bạn, bạn có thể nhận được một cửa gỗ từ một cửa hàng cửa gỗ, cửa bằng sắt từ cửa hàng cửa sắt hoặc cửa nhựa PVC từ cửa hàng tạp hóa. Thêm vào đó bạn có thể cần một người thợ với các khĩ thuật khác nhau cho từng loại cửa, ví dụ thợ mộc cho cửa gỗ thợ hàn cho cửa sắt v.v... Như bạn thấy có sự liên qua giữa các cửa cửa gỗ cần thợ mộc cửa sắt cần thợ hạn v.v...
 
 Nói một cách đơn giản
 > Nó là một factory của các factory; một nhóm các factory đơn lẻ nhưng các factory liên quan phụ thuộc với nhau mà không cần chỉ định các lớp cụ thể của chúng.
@@ -334,20 +334,20 @@ $expert->getDescription(); // Output: I can only fit iron doors
 
 Như bạn có thể thấy nhà máy cửa gỗ nhóm `carpenter` và `wooden door` cũng như vậy nhà máy cửa sắt nhóm `iron door`  `welder`. Và do đó nó đã giúp chúng tôi đảm bảo rằng đối với mỗi cánh cửa được tạo ra, chúng tôi không nhận được một chuyên gia phù hợp sai.
 
-**Khi nào sử**
+**Khi nào sử dụng**
 
 Khi có sự phụ thuộc tương quan giữa các logic phức tạp có liên   liên quan
 
 👷 Builder
 --------------------------------------------
 Ví dụ thực tế
-> Hãy tưởng tượng là bạn đang ở Hardee's và bạn đặt một đơn hàng , hãy nói "Big hardee" và họ đưa cho bạn mà không có bất kì câu hỏi nào; đây là một ví dụ về simple factory. Nhưng đâu là những trường hợp khi logic khởi tạo liên quan tới nhiều bước. Ví dụ như bạn muốn tùy chỉnh đơn Subway, bạn có nhiều lựa chọn trong việc chiếc burger của bjan được làm như nào như bạn đang muốn bánh mì gì? loại sốt mà bạn muốn?... Trong những trường hợp như vậy, builder pattern được sử dụng như một giải pháp.
+> Hãy tưởng tượng là bạn đang ở Hardee's và bạn đặt một đơn hàng , hãy nói "Big hardee" và họ đưa cho bạn mà không có bất kì câu hỏi nào; đây là một ví dụ về simple factory. Nhưng đâu là những trường hợp khi logic khởi tạo liên quan tới nhiều bước. Ví dụ như bạn muốn tùy chỉnh đơn Subway, bạn có nhiều lựa chọn trong việc chiếc burger của bạn được làm như nào ví dụ như bạn đang muốn bánh mì gì? loại sốt mà bạn muốn?... Trong những trường hợp như vậy, builder pattern được sử dụng như một giải pháp.
 
 Nói một cách đơn giản
 > Cho phép bạn bạn tạo các object có đặc điểm khác nhau trong khi tránh bị ảnh hưởng việc khởi tạo. Nó hữu dụng khi có thể tạo nhiều tùy chọn cho một object. Hoặc khi có quá nhiều bước trong việc tạo ra một object.
 
 Wikipedia nói
-> builder pattern là một phần mền design pattern tạo ra các đối tượng với ý định tìm kiếm giải pháp chống constructor.
+> builder pattern là một phần mền design pattern tạo ra các đối tượng với ý định tìm kiếm giải pháp chống lại việc khởi tạo.
 
 Nói xa thêm chút về mô hình chống constructor. Tại một thời điểm khác, chúng tôi đã thấy một constructor như dưới đây:
 
@@ -518,7 +518,7 @@ Khi một object được yêu cầu phải tương tự như object hiện có 
 💍 Singleton
 ------------
 Ví dụ thực tế
-> Cùng một lúc chỉ có thể có một tổng thống đối với mỗi quốc gia. Cùng một tổng thống phải đưa ra được hành động bất cứ khi nào nhiệm vụ gọi. Tổng thống ở đâu là một singleton.
+> Cùng một lúc chỉ có thể có một tổng thống đối với mỗi quốc gia. Cùng một tổng thống phải đưa ra được hành động bất cứ khi nào nhiệm vụ gọi. Tổng thống ở đây là một singleton.
 
 Nói đơn giản
 > Đảm bảo là chỉ có một đối tượng duy nhất của mỗi class được tạo ra.
